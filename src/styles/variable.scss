@@ -1,0 +1,12 @@
+// 定义全局的样式变量
+$sideNavBgColor:red;
+
+
+
+
+
+// 暴露定义的全局样式变量
+:export{
+    sideNavBgColor:$sideNavBgColor;
+}
+
