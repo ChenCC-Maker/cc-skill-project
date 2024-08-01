@@ -48,6 +48,12 @@ const baseRoutes = [
                 component:()=>import('@/views/skill/bulingBox'),
                 meta:{title:'发光的盒子'}
             },
+            {
+                path:'/skillRecord/tabSheet',
+                name:'tabSheet',
+                component:()=>import('@/views/skill/tabSheet'),
+                meta:{title:'扩展sheet'}
+            },
         ]
         
     }

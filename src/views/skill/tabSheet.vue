@@ -1,12 +1,12 @@
 <template>
   <div>
-    <span>仪表盘-主页</span>
+    <span>可扩展的sheet页面</span>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'DashboardIndex',
+  name: 'TabSheet',
 
   data() {
     return {
@@ -22,4 +22,5 @@ export default {
 
 <style scoped>
   /* scoped css */
+  
 </style>

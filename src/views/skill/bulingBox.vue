@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>发光的盒子</h1>
+    <span>发光的盒子</span>
   </div>
 </template>
 

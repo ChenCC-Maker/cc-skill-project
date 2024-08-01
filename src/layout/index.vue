@@ -3,19 +3,31 @@
     <div class="nav-bar">
         <sideNva/>
     </div>
-    <div class="app-main">
-        <router-view/>
+    <div class="app-main-wrap">
+      <div class="breadcrumb">
+        <el-breadcrumb separator="/">
+          <el-breadcrumb-item :to="{ path: '/' }">主页看板</el-breadcrumb-item>
+          <el-breadcrumb-item><a href="/">糖炒栗子店</a></el-breadcrumb-item>
+          <el-breadcrumb-item>元素滚动</el-breadcrumb-item>
+        </el-breadcrumb>
+      </div>
+      <div class="app-main">
+        <appMain/>
+      </div>
+      
     </div>
   </div>
 </template>
 
 <script>
 
-import sideNva from './components/sideNav/index.vue'
+import sideNva from './components/sideNav/index.vue';
+import appMain from './components/appMain.vue';
 export default {
   name: 'LayoutIndex',
   components:{
-    sideNva
+    sideNva,
+    appMain
   },
   data() {
     return {
@@ -41,14 +53,22 @@ export default {
             width: 200px;
             height: 100vh;
         }
-        .app-main{
-            margin-top: 50px;
+        .app-main-wrap{
+          .breadcrumb{
+            height: 30px;
+            width: 100%;
+            margin: 10px 10px 0px;
+          }
+          .app-main{
             width: 1234px;
-            height: calc(100vh - 50px);
-            background-color: blue;
-            margin: 0 10px;
+            height: calc(100vh - 40px);
+            background-color: #ffffff;
+            margin:0 10px;
             border-radius: 15px;
+            box-shadow: 0px 0px 10px 3px rgba(220, 220, 220, 0.5);
+          }
         }
+        
     }
     
 </style>

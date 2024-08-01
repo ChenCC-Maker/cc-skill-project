@@ -1,0 +1,20 @@
+// 全局的动画样式
+
+
+/* 
+* 侧边栏菜单切换的时候，内容展示区域的动画样式
+*/
+.fade-transform-leave-active,
+.fade-transform-enter-active {
+  transition: all  .5s;
+}
+
+.fade-transform-enter {
+  opacity: 0;
+  transform: translateX(-10px);
+}
+
+.fade-transform-leave-to {
+  opacity: 0;
+  transform: translateX(20px);
+}

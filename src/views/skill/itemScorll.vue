@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>元素滚动</h1>
+    <span>元素滚动</span>
   </div>
 </template>
 
