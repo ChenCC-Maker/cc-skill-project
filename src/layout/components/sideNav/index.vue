@@ -47,7 +47,7 @@ export default {
 
   methods: {
     handleOpen(){
-        console.log(this.baseRoutes);
+        
     },
     handleClose(){
 

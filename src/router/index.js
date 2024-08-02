@@ -64,4 +64,15 @@ const router = new Router({
     routes:baseRoutes
 })
 
+router.beforeEach((to, from, next) => {
+    if (router.currentRoute.path === to.path) {
+      // 当前路由就是即将跳转的路由，避免错误
+      console.log('Avoiding navigation duplication');
+      next(false); // 停止当前的导航
+    } else {
+      next(); // 允许导航继续
+    }
+  });
+  
+
 export default router;

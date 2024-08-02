@@ -5,11 +5,7 @@
     </div>
     <div class="app-main-wrap">
       <div class="breadcrumb">
-        <el-breadcrumb separator="/">
-          <el-breadcrumb-item :to="{ path: '/' }">主页看板</el-breadcrumb-item>
-          <el-breadcrumb-item><a href="/">糖炒栗子店</a></el-breadcrumb-item>
-          <el-breadcrumb-item>元素滚动</el-breadcrumb-item>
-        </el-breadcrumb>
+        <breadcrumb/>
       </div>
       <div class="app-main">
         <appMain/>
@@ -23,11 +19,13 @@
 
 import sideNva from './components/sideNav/index.vue';
 import appMain from './components/appMain.vue';
+import breadcrumb from './components/breadcrumb/index.vue';
 export default {
   name: 'LayoutIndex',
   components:{
     sideNva,
-    appMain
+    appMain,
+    breadcrumb
   },
   data() {
     return {
