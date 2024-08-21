@@ -1,21 +1,43 @@
 <template>
   <div>
-    <span>可扩展的sheet页面</span>
+    <expandTab :editableTabs="editableTabs" :tabDefaultTitle="tabDefaultTitle" @sendActiveTab="sendActiveTab">
+      <template v-slot:tabContent>
+        <tabContent @sendValue="sendValue"/>
+      </template>
+    </expandTab>
   </div>
 </template>
 
 <script>
+import expandTab from '@/components/expandTab.vue';
+import tabContent from './tabContent.vue';
 export default {
   name: 'TabSheet',
-
+  components:{
+    expandTab,
+    tabContent
+  },
   data() {
     return {
-      // data
+      editableTabs: [
+        {
+            title: '审查调查对象',
+            name: '1',
+        }, 
+      ],
+      tabDefaultTitle:'审查调查对象',
+      activeTabIndex:''
     };
   },
 
   methods: {
     // methods
+    sendValue(value){
+      this.editableTabs[this.activeTabIndex-1].title = value;
+    },
+    sendActiveTab(val){
+      this.activeTabIndex = val;
+    }
   },
 };
 </script>
