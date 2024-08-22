@@ -51,7 +51,7 @@ const baseRoutes = [
             {
                 path:'/skillRecord/tabSheet',
                 name:'tabSheet',
-                component:()=>import('@/views/skill/tabSheet'),
+                component:()=>import('@/views/skill/tabSheet/tabSheet.vue'),
                 meta:{title:'扩展sheet'}
             },
         ]

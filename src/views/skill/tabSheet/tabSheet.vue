@@ -1,6 +1,6 @@
 <template>
   <div>
-    <expandTab :editableTabs="editableTabs" :tabDefaultTitle="tabDefaultTitle" @sendActiveTab="sendActiveTab">
+    <expandTab :tabDefaultTitle="tabDefaultTitle" :newTabTitle="newTabTitle">
       <template v-slot:tabContent>
         <tabContent @sendValue="sendValue"/>
       </template>
@@ -19,25 +19,17 @@ export default {
   },
   data() {
     return {
-      editableTabs: [
-        {
-            title: '审查调查对象',
-            name: '1',
-        }, 
-      ],
       tabDefaultTitle:'审查调查对象',
-      activeTabIndex:''
+      activeTabIndex:'',
+      newTabTitle:''
     };
   },
 
   methods: {
     // methods
     sendValue(value){
-      this.editableTabs[this.activeTabIndex-1].title = value;
+      this.newTabTitle = value;
     },
-    sendActiveTab(val){
-      this.activeTabIndex = val;
-    }
   },
 };
 </script>
